@@ -1,0 +1,6 @@
+framework module Pods_textPreviwerTests {
+  umbrella header "Pods-textPreviwerTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,879 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0FA5F49529321644A095BE7F /* Pods_textPreviwerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC03342BE325B6D3198A9E47 /* Pods_textPreviwerTests.framework */; };
+		E71270ED7D9C3D96A84193E9 /* Pods_textPreviwerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9339A0F66DCD7D7E2D46CF30 /* Pods_textPreviwerUITests.framework */; };
+		EBEE4E182228E3880044AAC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEE4E172228E3880044AAC6 /* AppDelegate.swift */; };
+		EBEE4E1A2228E3880044AAC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEE4E192228E3880044AAC6 /* ViewController.swift */; };
+		EBEE4E1D2228E3880044AAC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBEE4E1B2228E3880044AAC6 /* Main.storyboard */; };
+		EBEE4E202228E3880044AAC6 /* textPreviwer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EBEE4E1E2228E3880044AAC6 /* textPreviwer.xcdatamodeld */; };
+		EBEE4E222228E38A0044AAC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBEE4E212228E38A0044AAC6 /* Assets.xcassets */; };
+		EBEE4E252228E38A0044AAC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBEE4E232228E38A0044AAC6 /* LaunchScreen.storyboard */; };
+		EBEE4E302228E38A0044AAC6 /* textPreviwerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEE4E2F2228E38A0044AAC6 /* textPreviwerTests.swift */; };
+		EBEE4E3B2228E38A0044AAC6 /* textPreviwerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEE4E3A2228E38A0044AAC6 /* textPreviwerUITests.swift */; };
+		EBEE4E492228F8250044AAC6 /* FontServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEE4E482228F8250044AAC6 /* FontServiceSpec.swift */; };
+		EBEE4E4B2229046A0044AAC6 /* TRFontsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEE4E4A2229046A0044AAC6 /* TRFontsService.swift */; };
+		EBEE4E4D22290ACE0044AAC6 /* FontsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEE4E4C22290ACE0044AAC6 /* FontsModel.swift */; };
+		EBEE4E5022291D370044AAC6 /* FontsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEE4E4F22291D370044AAC6 /* FontsViewModel.swift */; };
+		EBEE4E5222291DFF0044AAC6 /* ViewModelBindings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEE4E5122291DFF0044AAC6 /* ViewModelBindings.swift */; };
+		EBEE4E542229B0840044AAC6 /* ResultWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEE4E532229B0840044AAC6 /* ResultWrapper.swift */; };
+		F421E8179E3A2E6EBB5F682C /* Pods_textPreviwer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308C07363CB427AEE5E6DC11 /* Pods_textPreviwer.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EBEE4E2C2228E38A0044AAC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBEE4E0C2228E3880044AAC6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBEE4E132228E3880044AAC6;
+			remoteInfo = textPreviwer;
+		};
+		EBEE4E372228E38A0044AAC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBEE4E0C2228E3880044AAC6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBEE4E132228E3880044AAC6;
+			remoteInfo = textPreviwer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		308C07363CB427AEE5E6DC11 /* Pods_textPreviwer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_textPreviwer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		656620180A82DA8F8F6B2CD8 /* Pods-textPreviwer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-textPreviwer.debug.xcconfig"; path = "Target Support Files/Pods-textPreviwer/Pods-textPreviwer.debug.xcconfig"; sourceTree = "<group>"; };
+		9339A0F66DCD7D7E2D46CF30 /* Pods_textPreviwerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_textPreviwerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A015ADD944BA73BD055F79D6 /* Pods-textPreviwerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-textPreviwerUITests.release.xcconfig"; path = "Target Support Files/Pods-textPreviwerUITests/Pods-textPreviwerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B6585575E5BD36B37A7C4667 /* Pods-textPreviwerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-textPreviwerTests.debug.xcconfig"; path = "Target Support Files/Pods-textPreviwerTests/Pods-textPreviwerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C975CAFF22384D8845321F9D /* Pods-textPreviwerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-textPreviwerTests.release.xcconfig"; path = "Target Support Files/Pods-textPreviwerTests/Pods-textPreviwerTests.release.xcconfig"; sourceTree = "<group>"; };
+		DC03342BE325B6D3198A9E47 /* Pods_textPreviwerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_textPreviwerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFE2AFAAB3CF7F3FC00C7564 /* Pods-textPreviwerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-textPreviwerUITests.debug.xcconfig"; path = "Target Support Files/Pods-textPreviwerUITests/Pods-textPreviwerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EBEE4E142228E3880044AAC6 /* textPreviwer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = textPreviwer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBEE4E172228E3880044AAC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EBEE4E192228E3880044AAC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EBEE4E1C2228E3880044AAC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EBEE4E1F2228E3880044AAC6 /* textPreviwer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = textPreviwer.xcdatamodel; sourceTree = "<group>"; };
+		EBEE4E212228E38A0044AAC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EBEE4E242228E38A0044AAC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EBEE4E262228E38A0044AAC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBEE4E2B2228E38A0044AAC6 /* textPreviwerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = textPreviwerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBEE4E2F2228E38A0044AAC6 /* textPreviwerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textPreviwerTests.swift; sourceTree = "<group>"; };
+		EBEE4E312228E38A0044AAC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBEE4E362228E38A0044AAC6 /* textPreviwerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = textPreviwerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBEE4E3A2228E38A0044AAC6 /* textPreviwerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textPreviwerUITests.swift; sourceTree = "<group>"; };
+		EBEE4E3C2228E38A0044AAC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBEE4E482228F8250044AAC6 /* FontServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontServiceSpec.swift; sourceTree = "<group>"; };
+		EBEE4E4A2229046A0044AAC6 /* TRFontsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TRFontsService.swift; sourceTree = "<group>"; };
+		EBEE4E4C22290ACE0044AAC6 /* FontsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsModel.swift; sourceTree = "<group>"; };
+		EBEE4E4F22291D370044AAC6 /* FontsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsViewModel.swift; sourceTree = "<group>"; };
+		EBEE4E5122291DFF0044AAC6 /* ViewModelBindings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBindings.swift; sourceTree = "<group>"; };
+		EBEE4E532229B0840044AAC6 /* ResultWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultWrapper.swift; sourceTree = "<group>"; };
+		FFD9CACA9D0E4C86F6E924CA /* Pods-textPreviwer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-textPreviwer.release.xcconfig"; path = "Target Support Files/Pods-textPreviwer/Pods-textPreviwer.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EBEE4E112228E3880044AAC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F421E8179E3A2E6EBB5F682C /* Pods_textPreviwer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBEE4E282228E38A0044AAC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FA5F49529321644A095BE7F /* Pods_textPreviwerTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBEE4E332228E38A0044AAC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E71270ED7D9C3D96A84193E9 /* Pods_textPreviwerUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1ECE7FD77E791C48C8650DB2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				308C07363CB427AEE5E6DC11 /* Pods_textPreviwer.framework */,
+				DC03342BE325B6D3198A9E47 /* Pods_textPreviwerTests.framework */,
+				9339A0F66DCD7D7E2D46CF30 /* Pods_textPreviwerUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		52619E24919D28E1D93F3AAB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				656620180A82DA8F8F6B2CD8 /* Pods-textPreviwer.debug.xcconfig */,
+				FFD9CACA9D0E4C86F6E924CA /* Pods-textPreviwer.release.xcconfig */,
+				B6585575E5BD36B37A7C4667 /* Pods-textPreviwerTests.debug.xcconfig */,
+				C975CAFF22384D8845321F9D /* Pods-textPreviwerTests.release.xcconfig */,
+				DFE2AFAAB3CF7F3FC00C7564 /* Pods-textPreviwerUITests.debug.xcconfig */,
+				A015ADD944BA73BD055F79D6 /* Pods-textPreviwerUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EBEE4E0B2228E3880044AAC6 = {
+			isa = PBXGroup;
+			children = (
+				EBEE4E162228E3880044AAC6 /* textPreviwer */,
+				EBEE4E2E2228E38A0044AAC6 /* textPreviwerTests */,
+				EBEE4E392228E38A0044AAC6 /* textPreviwerUITests */,
+				EBEE4E152228E3880044AAC6 /* Products */,
+				52619E24919D28E1D93F3AAB /* Pods */,
+				1ECE7FD77E791C48C8650DB2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EBEE4E152228E3880044AAC6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EBEE4E142228E3880044AAC6 /* textPreviwer.app */,
+				EBEE4E2B2228E38A0044AAC6 /* textPreviwerTests.xctest */,
+				EBEE4E362228E38A0044AAC6 /* textPreviwerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EBEE4E162228E3880044AAC6 /* textPreviwer */ = {
+			isa = PBXGroup;
+			children = (
+				EBEE4E172228E3880044AAC6 /* AppDelegate.swift */,
+				EBEE4E582229B25F0044AAC6 /* Units */,
+				EBEE4E572229B2510044AAC6 /* Service */,
+				EBEE4E562229B1F10044AAC6 /* Protocol */,
+				EBEE4E552229B1D30044AAC6 /* Model */,
+				EBEE4E212228E38A0044AAC6 /* Assets.xcassets */,
+				EBEE4E232228E38A0044AAC6 /* LaunchScreen.storyboard */,
+				EBEE4E262228E38A0044AAC6 /* Info.plist */,
+				EBEE4E1E2228E3880044AAC6 /* textPreviwer.xcdatamodeld */,
+			);
+			path = textPreviwer;
+			sourceTree = "<group>";
+		};
+		EBEE4E2E2228E38A0044AAC6 /* textPreviwerTests */ = {
+			isa = PBXGroup;
+			children = (
+				EBEE4E2F2228E38A0044AAC6 /* textPreviwerTests.swift */,
+				EBEE4E312228E38A0044AAC6 /* Info.plist */,
+			);
+			path = textPreviwerTests;
+			sourceTree = "<group>";
+		};
+		EBEE4E392228E38A0044AAC6 /* textPreviwerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EBEE4E3A2228E38A0044AAC6 /* textPreviwerUITests.swift */,
+				EBEE4E3C2228E38A0044AAC6 /* Info.plist */,
+			);
+			path = textPreviwerUITests;
+			sourceTree = "<group>";
+		};
+		EBEE4E552229B1D30044AAC6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EBEE4E532229B0840044AAC6 /* ResultWrapper.swift */,
+				EBEE4E4C22290ACE0044AAC6 /* FontsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EBEE4E562229B1F10044AAC6 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				EBEE4E5122291DFF0044AAC6 /* ViewModelBindings.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		EBEE4E572229B2510044AAC6 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				EBEE4E5A2229B2760044AAC6 /* FontService */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		EBEE4E582229B25F0044AAC6 /* Units */ = {
+			isa = PBXGroup;
+			children = (
+				EBEE4E592229B26C0044AAC6 /* Main */,
+			);
+			path = Units;
+			sourceTree = "<group>";
+		};
+		EBEE4E592229B26C0044AAC6 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				EBEE4E1B2228E3880044AAC6 /* Main.storyboard */,
+				EBEE4E192228E3880044AAC6 /* ViewController.swift */,
+				EBEE4E4F22291D370044AAC6 /* FontsViewModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		EBEE4E5A2229B2760044AAC6 /* FontService */ = {
+			isa = PBXGroup;
+			children = (
+				EBEE4E482228F8250044AAC6 /* FontServiceSpec.swift */,
+				EBEE4E4A2229046A0044AAC6 /* TRFontsService.swift */,
+			);
+			path = FontService;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EBEE4E132228E3880044AAC6 /* textPreviwer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBEE4E3F2228E38A0044AAC6 /* Build configuration list for PBXNativeTarget "textPreviwer" */;
+			buildPhases = (
+				1DAE75BD04FCD55808BF3F4E /* [CP] Check Pods Manifest.lock */,
+				EBEE4E102228E3880044AAC6 /* Sources */,
+				EBEE4E112228E3880044AAC6 /* Frameworks */,
+				EBEE4E122228E3880044AAC6 /* Resources */,
+				96F4CFA5DE63BF44467713DE /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = textPreviwer;
+			productName = textPreviwer;
+			productReference = EBEE4E142228E3880044AAC6 /* textPreviwer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EBEE4E2A2228E38A0044AAC6 /* textPreviwerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBEE4E422228E38A0044AAC6 /* Build configuration list for PBXNativeTarget "textPreviwerTests" */;
+			buildPhases = (
+				49E08E3A3ECF8B6D4B585F22 /* [CP] Check Pods Manifest.lock */,
+				EBEE4E272228E38A0044AAC6 /* Sources */,
+				EBEE4E282228E38A0044AAC6 /* Frameworks */,
+				EBEE4E292228E38A0044AAC6 /* Resources */,
+				DECB1A012CEFD3F784CAEC9A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EBEE4E2D2228E38A0044AAC6 /* PBXTargetDependency */,
+			);
+			name = textPreviwerTests;
+			productName = textPreviwerTests;
+			productReference = EBEE4E2B2228E38A0044AAC6 /* textPreviwerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EBEE4E352228E38A0044AAC6 /* textPreviwerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBEE4E452228E38A0044AAC6 /* Build configuration list for PBXNativeTarget "textPreviwerUITests" */;
+			buildPhases = (
+				22D2CCE863BABAD3D5308703 /* [CP] Check Pods Manifest.lock */,
+				EBEE4E322228E38A0044AAC6 /* Sources */,
+				EBEE4E332228E38A0044AAC6 /* Frameworks */,
+				EBEE4E342228E38A0044AAC6 /* Resources */,
+				CEE6DFCFF1BE144326A4F916 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EBEE4E382228E38A0044AAC6 /* PBXTargetDependency */,
+			);
+			name = textPreviwerUITests;
+			productName = textPreviwerUITests;
+			productReference = EBEE4E362228E38A0044AAC6 /* textPreviwerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EBEE4E0C2228E3880044AAC6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = com;
+				TargetAttributes = {
+					EBEE4E132228E3880044AAC6 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					EBEE4E2A2228E38A0044AAC6 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = EBEE4E132228E3880044AAC6;
+					};
+					EBEE4E352228E38A0044AAC6 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = EBEE4E132228E3880044AAC6;
+					};
+				};
+			};
+			buildConfigurationList = EBEE4E0F2228E3880044AAC6 /* Build configuration list for PBXProject "textPreviwer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EBEE4E0B2228E3880044AAC6;
+			productRefGroup = EBEE4E152228E3880044AAC6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EBEE4E132228E3880044AAC6 /* textPreviwer */,
+				EBEE4E2A2228E38A0044AAC6 /* textPreviwerTests */,
+				EBEE4E352228E38A0044AAC6 /* textPreviwerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EBEE4E122228E3880044AAC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBEE4E252228E38A0044AAC6 /* LaunchScreen.storyboard in Resources */,
+				EBEE4E222228E38A0044AAC6 /* Assets.xcassets in Resources */,
+				EBEE4E1D2228E3880044AAC6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBEE4E292228E38A0044AAC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBEE4E342228E38A0044AAC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1DAE75BD04FCD55808BF3F4E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-textPreviwer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		22D2CCE863BABAD3D5308703 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-textPreviwerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49E08E3A3ECF8B6D4B585F22 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-textPreviwerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96F4CFA5DE63BF44467713DE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-textPreviwer/Pods-textPreviwer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-textPreviwer/Pods-textPreviwer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CEE6DFCFF1BE144326A4F916 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-textPreviwerUITests/Pods-textPreviwerUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-textPreviwerUITests/Pods-textPreviwerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DECB1A012CEFD3F784CAEC9A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-textPreviwerTests/Pods-textPreviwerTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-textPreviwerTests/Pods-textPreviwerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EBEE4E102228E3880044AAC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBEE4E1A2228E3880044AAC6 /* ViewController.swift in Sources */,
+				EBEE4E5022291D370044AAC6 /* FontsViewModel.swift in Sources */,
+				EBEE4E182228E3880044AAC6 /* AppDelegate.swift in Sources */,
+				EBEE4E202228E3880044AAC6 /* textPreviwer.xcdatamodeld in Sources */,
+				EBEE4E5222291DFF0044AAC6 /* ViewModelBindings.swift in Sources */,
+				EBEE4E4B2229046A0044AAC6 /* TRFontsService.swift in Sources */,
+				EBEE4E542229B0840044AAC6 /* ResultWrapper.swift in Sources */,
+				EBEE4E4D22290ACE0044AAC6 /* FontsModel.swift in Sources */,
+				EBEE4E492228F8250044AAC6 /* FontServiceSpec.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBEE4E272228E38A0044AAC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBEE4E302228E38A0044AAC6 /* textPreviwerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBEE4E322228E38A0044AAC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBEE4E3B2228E38A0044AAC6 /* textPreviwerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EBEE4E2D2228E38A0044AAC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBEE4E132228E3880044AAC6 /* textPreviwer */;
+			targetProxy = EBEE4E2C2228E38A0044AAC6 /* PBXContainerItemProxy */;
+		};
+		EBEE4E382228E38A0044AAC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBEE4E132228E3880044AAC6 /* textPreviwer */;
+			targetProxy = EBEE4E372228E38A0044AAC6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EBEE4E1B2228E3880044AAC6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBEE4E1C2228E3880044AAC6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EBEE4E232228E38A0044AAC6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBEE4E242228E38A0044AAC6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EBEE4E3D2228E38A0044AAC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EBEE4E3E2228E38A0044AAC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EBEE4E402228E38A0044AAC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 656620180A82DA8F8F6B2CD8 /* Pods-textPreviwer.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 53PCKL938K;
+				INFOPLIST_FILE = textPreviwer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.textPreviwer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EBEE4E412228E38A0044AAC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFD9CACA9D0E4C86F6E924CA /* Pods-textPreviwer.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 53PCKL938K;
+				INFOPLIST_FILE = textPreviwer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.textPreviwer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EBEE4E432228E38A0044AAC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6585575E5BD36B37A7C4667 /* Pods-textPreviwerTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 53PCKL938K;
+				INFOPLIST_FILE = textPreviwerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.textPreviwerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/textPreviwer.app/textPreviwer";
+			};
+			name = Debug;
+		};
+		EBEE4E442228E38A0044AAC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C975CAFF22384D8845321F9D /* Pods-textPreviwerTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 53PCKL938K;
+				INFOPLIST_FILE = textPreviwerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.textPreviwerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/textPreviwer.app/textPreviwer";
+			};
+			name = Release;
+		};
+		EBEE4E462228E38A0044AAC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFE2AFAAB3CF7F3FC00C7564 /* Pods-textPreviwerUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 53PCKL938K;
+				INFOPLIST_FILE = textPreviwerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.textPreviwerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = textPreviwer;
+			};
+			name = Debug;
+		};
+		EBEE4E472228E38A0044AAC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A015ADD944BA73BD055F79D6 /* Pods-textPreviwerUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 53PCKL938K;
+				INFOPLIST_FILE = textPreviwerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.textPreviwerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = textPreviwer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EBEE4E0F2228E3880044AAC6 /* Build configuration list for PBXProject "textPreviwer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBEE4E3D2228E38A0044AAC6 /* Debug */,
+				EBEE4E3E2228E38A0044AAC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBEE4E3F2228E38A0044AAC6 /* Build configuration list for PBXNativeTarget "textPreviwer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBEE4E402228E38A0044AAC6 /* Debug */,
+				EBEE4E412228E38A0044AAC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBEE4E422228E38A0044AAC6 /* Build configuration list for PBXNativeTarget "textPreviwerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBEE4E432228E38A0044AAC6 /* Debug */,
+				EBEE4E442228E38A0044AAC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBEE4E452228E38A0044AAC6 /* Build configuration list for PBXNativeTarget "textPreviwerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBEE4E462228E38A0044AAC6 /* Debug */,
+				EBEE4E472228E38A0044AAC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EBEE4E1E2228E3880044AAC6 /* textPreviwer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EBEE4E1F2228E3880044AAC6 /* textPreviwer.xcdatamodel */,
+			);
+			currentVersion = EBEE4E1F2228E3880044AAC6 /* textPreviwer.xcdatamodel */;
+			path = textPreviwer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = EBEE4E0C2228E3880044AAC6 /* Project object */;
+}
