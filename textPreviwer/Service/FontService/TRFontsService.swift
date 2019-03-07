@@ -25,8 +25,8 @@ class TRFontsService: FontServiceSpec {
             let downloadTask = URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) in
                 if let data = data {
                     let decoder = JSONDecoder.init()
-                    if let jj = try? decoder.decode(ResultWrapper<FontsModel>.self, from: data) {
-                        observer.onNext(jj)
+                    if let fontModel = try? decoder.decode(ResultWrapper<FontsModel>.self, from: data) {
+                        observer.onNext(fontModel)
                     }
                 }
             })
@@ -34,15 +34,15 @@ class TRFontsService: FontServiceSpec {
             return Disposables.create()
         }
     }
-    func getFont(with urlStr:String,name fileName:String) ->  Observable<String> {
+    func getFont(with urlStr:String,name fileName:String) ->  Observable<URL> {
         let documents = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         guard let url = URL(string: urlStr) else {
             return Observable.empty()
         }
         let filePath = documents.appendingPathComponent("\(fileName).ttf")
 
-        return Observable<String>.create { (observer) -> Disposable in
-                var request = URLRequest(url: url, cachePolicy: URLRequest.CachePolicy.reloadIgnoringCacheData, timeoutInterval: 2)
+        return Observable<URL>.create { (observer) -> Disposable in
+                var request = URLRequest(url: url, cachePolicy: URLRequest.CachePolicy.reloadIgnoringCacheData, timeoutInterval: 30)
                 request.allHTTPHeaderFields = ["Content-Type":"application/json"]
             let downloadTask = URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) in
                 if let error = error {
@@ -52,12 +52,8 @@ class TRFontsService: FontServiceSpec {
                 if let data = data {
                     do {
                         try data.write(to: filePath)
-                        if let name = self.loadFont(filePath) {
-                            observer.onNext(name)
-                            observer.onCompleted()
-                        } else {
-                            observer.onCompleted()
-                        }
+                        observer.onNext(filePath)
+                        observer.onCompleted()
                     } catch {
                         observer.onError(error)
                         observer.onCompleted()
@@ -66,31 +62,6 @@ class TRFontsService: FontServiceSpec {
             })
                 downloadTask.resume()
             return Disposables.create()
-        }
-    }
-
-    func loadFont(_ path: URL) -> String? {
-
-        guard let data = try? Data(contentsOf: path, options: Data.ReadingOptions.init(rawValue: 0)) else {
-            return nil
-
-        }
-        guard let provider = CGDataProvider(data: data as CFData) else {
-            return nil
-
-        }
-        guard let font = CGFont(provider) else {return nil}
-        var error: Unmanaged<CFError>?
-        let success = CTFontManagerRegisterGraphicsFont(font, &error)
-        if !success {
-            print("Error loading font. Font is possibly already registered.")
-            return nil
-        }
-
-        if let name = font.postScriptName {
-            return String(name)
-        } else {
-            return nil
         }
     }
 }

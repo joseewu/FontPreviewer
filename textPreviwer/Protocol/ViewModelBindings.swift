@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 protocol ViewModelBindings {
     associatedtype Inputs
     associatedtype Outputs

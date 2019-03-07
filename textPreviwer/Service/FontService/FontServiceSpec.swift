@@ -10,12 +10,14 @@ import Foundation
 import RxSwift
 import RxCocoa
 
+//define spec of FontService
 protocol FontServiceSpec {
     var apiKey:String {get}
     var mainDomain:String{get}
     func getGoogleFonts() -> Observable<ResultWrapper<FontsModel>>
-    func getFont(with urlStr:String,name fileName:String) ->  Observable<String>
+    func getFont(with urlStr:String,name fileName:String) ->  Observable<URL>
 }
+
 extension FontServiceSpec {
     var apiKey: String {
         return "AIzaSyBETOmg6VZkVi5IPeLYCHyf90gYAE7xt0g"
