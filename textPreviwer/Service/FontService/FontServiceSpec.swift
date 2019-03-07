@@ -20,7 +20,8 @@ protocol FontServiceSpec {
 
 extension FontServiceSpec {
     var apiKey: String {
-        return "AIzaSyBETOmg6VZkVi5IPeLYCHyf90gYAE7xt0g"
+        
+        return ""
     }
     var mainDomain:String {
         return "https://www.googleapis.com/webfonts/v1/webfonts"

@@ -14,11 +14,13 @@ protocol FontsViewModelInputs {
     var viewDidAppear:PublishSubject<Void> {get}
     var selectedFont:PublishSubject<Int> {get}
 }
+
 protocol FontsViewModelOutputs {
     var fontRegisteredName:[String] {get}
     var registeredFontName:Driver<String?> {get}
     var update:Driver<Void> {get}
 }
+
 class FontsViewModel:ViewModelBindings,FontsViewModelInputs,FontsViewModelOutputs {
     var registeredFontName: Driver<String?>
 
@@ -35,8 +37,10 @@ class FontsViewModel:ViewModelBindings,FontsViewModelInputs,FontsViewModelOutput
 
     var service:FontServiceSpec!
     let disposeBag:DisposeBag = DisposeBag()
+
     private let updateSubject: PublishSubject<Void> = PublishSubject.init()
     private let registeredFontNameSubject: PublishSubject<String?> = PublishSubject.init()
+    
     init() {
         service = TRFontsService()
         update = updateSubject.asDriver(onErrorJustReturn: ())
