@@ -9,10 +9,13 @@
 import UIKit
 import RxCocoa
 import RxSwift
+protocol TextPreviewCollectionViewCellDelegate {
 
+}
 class TextPreviewCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var lbTextPreview: UILabel!
+    var fontName:String?
     private let service:TRFontsService = TRFontsService()
     private let taskQueue:OperationQueue = OperationQueue()
     private var disposeble:Disposable?
@@ -33,6 +36,7 @@ class TextPreviewCollectionViewCell: UICollectionViewCell {
         let block = BlockOperation { [weak self] in
             self?.disposeble = self?.service.getFont2(with: urlStr, name: fileName).subscribe(onNext: { (nameString) in
                 DispatchQueue.main.async {
+                    self?.fontName = nameString
                     self?.lbTextPreview.font = UIFont(name: nameString, size: 20)
                 }
             })
@@ -41,6 +45,7 @@ class TextPreviewCollectionViewCell: UICollectionViewCell {
     }
     override func prepareForReuse() {
         super.prepareForReuse()
+        fontName = nil
         taskQueue.cancelAllOperations()
         disposeble?.dispose()
         lbTextPreview.font = nil

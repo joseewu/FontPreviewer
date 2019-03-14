@@ -16,7 +16,6 @@ class ViewController: UIViewController {
 
     private let viewModel:FontsViewModel = FontsViewModel()
     let tapGesture:UITapGestureRecognizer = UITapGestureRecognizer()
-    let fontPicker:UIPickerView = UIPickerView()
     private var textFieldStack:[UITextField] = [UITextField]()
     private var activeTextField:UITextField?
     private let loadingIndicator:UIActivityIndicatorView = UIActivityIndicatorView()
@@ -36,14 +35,14 @@ class ViewController: UIViewController {
     }
 
     func setUp(){
+
         view.backgroundColor = UIColor.lightGray
         cardView.layer.borderWidth = 1.0
         cardView.layer.borderColor = UIColor.lightGray.cgColor
         cardView.clipsToBounds = true
         tapGesture.addTarget(self, action: #selector(addLabel(_:)))
         cardView.addGestureRecognizer(tapGesture)
-        fontPicker.dataSource = self
-        fontPicker.delegate = self
+
         loadingIndicator.style = .whiteLarge
         loadingIndicator.startAnimating()
         loadingIndicator.frame.size = CGSize(width: 100, height: 100)
@@ -64,10 +63,12 @@ class ViewController: UIViewController {
     }
 
     func bindViewModel() {
+
         viewModel.outputs.update.drive(onNext: { [weak self] _ in
             self?.loadingIndicator.stopAnimating()
             self?.collectionView.reloadData()
         }).disposed(by: disposeBag)
+
         viewModel.outputs.registeredFontName.drive(onNext: { [weak self] fontName in
             if let activeTextField = self?.activeTextField, let fontName = fontName {
                 activeTextField.font = UIFont(name: fontName, size: 20)
@@ -81,37 +82,22 @@ class ViewController: UIViewController {
         let newTextfiled:UITextField = UITextField(frame: CGRect(origin: location, size: CGSize(width: 100, height: 50)))
         newTextfiled.text = "Hello!"
         newTextfiled.minimumFontSize = 20
-        newTextfiled.inputView = fontPicker
+        newTextfiled.sizeToFit()
         newTextfiled.tag = textFieldStack.count + 1
         newTextfiled.delegate = self
+        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(didPan(_:)))
+        newTextfiled.addGestureRecognizer(panGesture)
         sender.view?.addSubview(newTextfiled)
         textFieldStack.append(newTextfiled)
     }
-
+    @objc func didPan(_ sender:UIPanGestureRecognizer) {
+        sender.view?.center = sender.location(in: cardView)
+    }
 }
 extension ViewController:UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         activeTextField = textField
-    }
-}
-extension ViewController:UIPickerViewDelegate,UIPickerViewDataSource {
-
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return viewModel.outputs.fontRegisteredName.count
-    }
-
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        let titleString = viewModel.outputs.fontRegisteredName[row]
-        return titleString
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        loadingIndicator.startAnimating()
-        viewModel.inputs.selectedFont.onNext(row)
+        textField.sizeToFit()
     }
 }
 
@@ -135,4 +121,9 @@ extension ViewController:UICollectionViewDataSource, UICollectionViewDelegate,UI
         let preferHeight = (collectionView.frame.size.height - 20)/3
         return CGSize(width: preferWidth, height: preferHeight)
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as? TextPreviewCollectionViewCell
+        activeTextField?.font = UIFont(name: cell?.fontName ?? "", size: 20)
+    }
+
 }
