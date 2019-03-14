@@ -10,6 +10,13 @@ import Foundation
 import RxSwift
 import RxCocoa
 class TRFontsService: FontServiceSpec {
+    var apiKey: String {
+
+        return ""
+    }
+    var mainDomain:String {
+        return "https://www.googleapis.com/webfonts/v1/webfonts"
+    }
     init() {
 
     }
@@ -62,6 +69,61 @@ class TRFontsService: FontServiceSpec {
             })
                 downloadTask.resume()
             return Disposables.create()
+        }
+    }
+    func getFont2(with urlStr:String,name fileName:String) ->  Observable<String> {
+        let documents = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        guard let url = URL(string: urlStr) else {
+            return Observable.empty()
+        }
+        let filePath = documents.appendingPathComponent("\(fileName).ttf")
+
+        return Observable<String>.create { (observer) -> Disposable in
+            var request = URLRequest(url: url, cachePolicy: URLRequest.CachePolicy.reloadIgnoringCacheData, timeoutInterval: 30)
+            request.allHTTPHeaderFields = ["Content-Type":"application/json"]
+            let downloadTask = URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) in
+                if let error = error {
+                    observer.onError(error)
+                    observer.onCompleted()
+                }
+                if let data = data {
+                    do {
+                        try data.write(to: filePath)
+                        if let fontDescribeName = self.loadFont(filePath) {
+                            observer.onNext(fontDescribeName)
+                            observer.onCompleted()
+                        }
+                    } catch {
+                        observer.onError(error)
+                        observer.onCompleted()
+                    }
+                }
+            })
+            downloadTask.resume()
+            return Disposables.create()
+        }
+    }
+    private func loadFont(_ path: URL) -> String? {
+
+        guard let data = try? Data(contentsOf: path, options: Data.ReadingOptions.init(rawValue: 0)) else {
+            return nil
+
+        }
+        guard let provider = CGDataProvider(data: data as CFData) else {
+            return nil
+
+        }
+
+        guard let font = CGFont(provider) else {return nil}
+        var error: Unmanaged<CFError>?
+        let success = CTFontManagerRegisterGraphicsFont(font, &error)
+        if !success {
+            return String(font.postScriptName ?? "")
+        }
+        if let name = font.postScriptName {
+            return String(name)
+        } else {
+            return nil
         }
     }
 }

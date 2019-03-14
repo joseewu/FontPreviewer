@@ -34,11 +34,42 @@
                                     <constraint firstAttribute="bottom" secondItem="NQs-r1-KIW" secondAttribute="bottom" id="jbp-8s-Cxa"/>
                                 </constraints>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1QF-j1-frF">
+                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="z7X-9v-qw4">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="mne-yc-uI9"/>
+                                        </constraints>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="IYt-Wa-rXl">
+                                            <size key="itemSize" width="196" height="45"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="RX0-5k-5oB">
+                                                <rect key="frame" x="0.0" y="0.0" width="196" height="45"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="196" height="45"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </view>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1QF-j1-frF" secondAttribute="bottom" id="JuZ-xC-sMI"/>
                             <constraint firstItem="HAR-Np-kgx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="N6K-n6-gbg"/>
                             <constraint firstItem="HAR-Np-kgx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="21" id="cQ6-Ex-JKG"/>
+                            <constraint firstItem="1QF-j1-frF" firstAttribute="trailing" secondItem="HAR-Np-kgx" secondAttribute="trailing" id="l4M-Iw-KZr"/>
+                            <constraint firstItem="1QF-j1-frF" firstAttribute="leading" secondItem="HAR-Np-kgx" secondAttribute="leading" id="n2f-Uf-9rn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HAR-Np-kgx" secondAttribute="trailing" id="tzO-KY-gQR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HAR-Np-kgx" secondAttribute="bottom" constant="226" id="usw-4w-6jD"/>
                         </constraints>
@@ -46,6 +77,7 @@
                     </view>
                     <connections>
                         <outlet property="cardView" destination="HAR-Np-kgx" id="NdY-zm-zrm"/>
+                        <outlet property="collectionView" destination="z7X-9v-qw4" id="bW8-3u-AEI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

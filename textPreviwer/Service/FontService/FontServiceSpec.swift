@@ -17,13 +17,3 @@ protocol FontServiceSpec {
     func getGoogleFonts() -> Observable<ResultWrapper<FontsModel>>
     func getFont(with urlStr:String,name fileName:String) ->  Observable<URL>
 }
-
-extension FontServiceSpec {
-    var apiKey: String {
-        
-        return ""
-    }
-    var mainDomain:String {
-        return "https://www.googleapis.com/webfonts/v1/webfonts"
-    }
-}

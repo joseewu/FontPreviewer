@@ -22,6 +22,7 @@ protocol FontsViewModelOutputs {
 }
 
 class FontsViewModel:ViewModelBindings,FontsViewModelInputs,FontsViewModelOutputs {
+
     var registeredFontName: Driver<String?>
 
     var update: Driver<Void>
@@ -44,6 +45,7 @@ class FontsViewModel:ViewModelBindings,FontsViewModelInputs,FontsViewModelOutput
     init() {
         service = TRFontsService()
         update = updateSubject.asDriver(onErrorJustReturn: ())
+
         registeredFontName = registeredFontNameSubject.asDriver(onErrorJustReturn: nil)
         loadFont()
     }
@@ -82,6 +84,7 @@ class FontsViewModel:ViewModelBindings,FontsViewModelInputs,FontsViewModelOutput
                 }
                 }, onCompleted: {
             }).disposed(by: disposeBag)
+
     }
 
     private func loadFont(_ path: URL) -> String? {

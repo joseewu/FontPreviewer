@@ -9,8 +9,11 @@
 /* Begin PBXBuildFile section */
 		0FA5F49529321644A095BE7F /* Pods_textPreviwerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC03342BE325B6D3198A9E47 /* Pods_textPreviwerTests.framework */; };
 		E71270ED7D9C3D96A84193E9 /* Pods_textPreviwerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9339A0F66DCD7D7E2D46CF30 /* Pods_textPreviwerUITests.framework */; };
+		EB2156862239FE7F00434044 /* Throttler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2156852239FE7F00434044 /* Throttler.swift */; };
+		EB2156892239FFE600434044 /* TextPreviewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2156872239FFE600434044 /* TextPreviewCollectionViewCell.swift */; };
+		EB21568A2239FFE600434044 /* TextPreviewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB2156882239FFE600434044 /* TextPreviewCollectionViewCell.xib */; };
+		EB21568D223A3FDA00434044 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEE4E192228E3880044AAC6 /* ViewController.swift */; };
 		EBEE4E182228E3880044AAC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEE4E172228E3880044AAC6 /* AppDelegate.swift */; };
-		EBEE4E1A2228E3880044AAC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEE4E192228E3880044AAC6 /* ViewController.swift */; };
 		EBEE4E1D2228E3880044AAC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBEE4E1B2228E3880044AAC6 /* Main.storyboard */; };
 		EBEE4E202228E3880044AAC6 /* textPreviwer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EBEE4E1E2228E3880044AAC6 /* textPreviwer.xcdatamodeld */; };
 		EBEE4E222228E38A0044AAC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBEE4E212228E38A0044AAC6 /* Assets.xcassets */; };
@@ -52,6 +55,9 @@
 		C975CAFF22384D8845321F9D /* Pods-textPreviwerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-textPreviwerTests.release.xcconfig"; path = "Target Support Files/Pods-textPreviwerTests/Pods-textPreviwerTests.release.xcconfig"; sourceTree = "<group>"; };
 		DC03342BE325B6D3198A9E47 /* Pods_textPreviwerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_textPreviwerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFE2AFAAB3CF7F3FC00C7564 /* Pods-textPreviwerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-textPreviwerUITests.debug.xcconfig"; path = "Target Support Files/Pods-textPreviwerUITests/Pods-textPreviwerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EB2156852239FE7F00434044 /* Throttler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Throttler.swift; sourceTree = "<group>"; };
+		EB2156872239FFE600434044 /* TextPreviewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPreviewCollectionViewCell.swift; sourceTree = "<group>"; };
+		EB2156882239FFE600434044 /* TextPreviewCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextPreviewCollectionViewCell.xib; sourceTree = "<group>"; };
 		EBEE4E142228E3880044AAC6 /* textPreviwer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = textPreviwer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBEE4E172228E3880044AAC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBEE4E192228E3880044AAC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +162,7 @@
 				EBEE4E572229B2510044AAC6 /* Service */,
 				EBEE4E562229B1F10044AAC6 /* Protocol */,
 				EBEE4E552229B1D30044AAC6 /* Model */,
+				EB2156852239FE7F00434044 /* Throttler.swift */,
 				EBEE4E212228E38A0044AAC6 /* Assets.xcassets */,
 				EBEE4E232228E38A0044AAC6 /* LaunchScreen.storyboard */,
 				EBEE4E262228E38A0044AAC6 /* Info.plist */,
@@ -221,6 +228,8 @@
 				EBEE4E1B2228E3880044AAC6 /* Main.storyboard */,
 				EBEE4E192228E3880044AAC6 /* ViewController.swift */,
 				EBEE4E4F22291D370044AAC6 /* FontsViewModel.swift */,
+				EB2156872239FFE600434044 /* TextPreviewCollectionViewCell.swift */,
+				EB2156882239FFE600434044 /* TextPreviewCollectionViewCell.xib */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -344,6 +353,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB21568A2239FFE600434044 /* TextPreviewCollectionViewCell.xib in Resources */,
 				EBEE4E252228E38A0044AAC6 /* LaunchScreen.storyboard in Resources */,
 				EBEE4E222228E38A0044AAC6 /* Assets.xcassets in Resources */,
 				EBEE4E1D2228E3880044AAC6 /* Main.storyboard in Resources */,
@@ -522,13 +532,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBEE4E1A2228E3880044AAC6 /* ViewController.swift in Sources */,
 				EBEE4E5022291D370044AAC6 /* FontsViewModel.swift in Sources */,
 				EBEE4E182228E3880044AAC6 /* AppDelegate.swift in Sources */,
 				EBEE4E202228E3880044AAC6 /* textPreviwer.xcdatamodeld in Sources */,
 				EBEE4E5222291DFF0044AAC6 /* ViewModelBindings.swift in Sources */,
+				EB21568D223A3FDA00434044 /* ViewController.swift in Sources */,
 				EBEE4E4B2229046A0044AAC6 /* TRFontsService.swift in Sources */,
+				EB2156862239FE7F00434044 /* Throttler.swift in Sources */,
 				EBEE4E542229B0840044AAC6 /* ResultWrapper.swift in Sources */,
+				EB2156892239FFE600434044 /* TextPreviewCollectionViewCell.swift in Sources */,
 				EBEE4E4D22290ACE0044AAC6 /* FontsModel.swift in Sources */,
 				EBEE4E492228F8250044AAC6 /* FontServiceSpec.swift in Sources */,
 			);
